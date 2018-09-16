@@ -14,13 +14,25 @@ public class Movement : MonoBehaviour
 
     private void UserMovementUpdate()
     {
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
+        #region basic float declaration
+        float vertical = 0.0f;
+        float horizontal = 0.0f;
+        #endregion
+
+        //SHOULD PROBABLY CHANGE THIS TO BE DONE VIA EXTERNAL CCONTROLLER SO WE CAN 
+        //MAKE MOVEMENT CONTROLS MODULAR AND PORT TO ANY SORT OF CONTROLS
+        if (this.userControlled)
+        {
+            vertical = Input.GetAxisRaw("Vertical");
+            horizontal = Input.GetAxisRaw("Horizontal");
+        }
 
         moveAnim.SetFloat("horizontal", horizontal);
         moveAnim.SetFloat("vertical", vertical);
 
-        this.rigidBdy.AddForce(new Vector2(horizontal, vertical));
+        Vector2 force = new Vector2(horizontal, vertical);
+
+        this.rigidBdy.AddForce(force);// * Time.fixedDeltaTime);
 
     }
 
