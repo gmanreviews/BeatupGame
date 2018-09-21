@@ -4,7 +4,6 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityPhysics2D
 {
     [TaskCategory("Basic/Physics2D")]
     [TaskDescription("Casts a circle against all colliders in the scene. Returns success if a collider was hit.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=118")]
     public class Circlecast : Action
     {
         [Tooltip("Starts the circlecast at the GameObject's position. If null the originPosition will be used.")]

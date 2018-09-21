@@ -8,7 +8,6 @@ namespace BehaviorDesigner.Runtime.Tasks
                      "in that it will always run the tasks from left to right within the tree. The random selector task shuffles the child tasks up and then begins " +
                      "execution in a random order. Other than that the random selector class is the same as the selector class. It will continue running tasks " +
                      "until a task completes successfully. If no child tasks return success then it will return failure.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=30")]
     [TaskIcon("{SkinColor}RandomSelectorIcon.png")]
     public class RandomSelector : Composite
     {
@@ -28,11 +27,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         {
             // If specified, use the seed provided.
             if (useSeed) {
-#if !(UNITY_5_3)
                 Random.InitState(seed);
-#else
-                Random.seed = seed;
-#endif
             }
 
             // Add the index of each child to a list to make the Fischer-Yates shuffle possible.

@@ -3,7 +3,6 @@ using UnityEngine;
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Start a new behavior tree and return success after it has been started.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=20")]
     [TaskIcon("{SkinColor}StartBehaviorTreeIcon.png")]
     public class StartBehaviorTree : Action
     {

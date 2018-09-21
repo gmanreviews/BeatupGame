@@ -4,7 +4,6 @@ namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Returns success when an object exits the 2D trigger. This task will only receive the physics callback if it is being reevaluated (with a conditional abort or under a parallel task).")]
     [TaskCategory("Physics")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=110")]
     public class HasExitedTrigger2D : Conditional
     {
         [Tooltip("The tag of the GameObject to check for a trigger against")]

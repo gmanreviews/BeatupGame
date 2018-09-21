@@ -3,7 +3,6 @@ using UnityEngine;
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Pause or disable a behavior tree and return success after it has been stopped.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=21")]
     [TaskIcon("{SkinColor}StopBehaviorTreeIcon.png")]
     public class StopBehaviorTree : Action
     {

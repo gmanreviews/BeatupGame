@@ -1,5 +1,4 @@
-﻿#if !(UNITY_5_3 || UNITY_5_4 || UNITY_5_5)
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityNavMeshAgent
@@ -46,4 +45,3 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityNavMeshAgent
         }
     }
 }
-#endif

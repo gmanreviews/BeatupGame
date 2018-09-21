@@ -4,7 +4,6 @@ namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Returns success when a 2D collision starts. This task will only receive the physics callback if it is being reevaluated (with a conditional abort or under a parallel task).")]
     [TaskCategory("Physics")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=110")]
     public class HasEnteredCollision2D : Conditional
     {
         [Tooltip("The tag of the GameObject to check for a collision against")]

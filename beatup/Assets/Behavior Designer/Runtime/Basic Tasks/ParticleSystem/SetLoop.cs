@@ -30,12 +30,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityParticleSystem
                 return TaskStatus.Failure;
             }
 
-#if UNITY_5_3 || UNITY_5_4
-            particleSystem.loop = loop.Value;
-#else
             ParticleSystem.MainModule mainParticleSystem = particleSystem.main;
             mainParticleSystem.loop = loop.Value;
-#endif
 
             return TaskStatus.Success;
         }

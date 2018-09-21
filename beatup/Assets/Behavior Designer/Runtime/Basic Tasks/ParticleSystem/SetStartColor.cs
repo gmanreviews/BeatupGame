@@ -30,12 +30,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityParticleSystem
                 return TaskStatus.Failure;
             }
 
-#if UNITY_5_3 || UNITY_5_4
-            particleSystem.startColor = startColor.Value;
-#else
             ParticleSystem.MainModule mainParticleSystem = particleSystem.main;
             mainParticleSystem.startColor = startColor.Value;
-#endif
 
             return TaskStatus.Success;
         }

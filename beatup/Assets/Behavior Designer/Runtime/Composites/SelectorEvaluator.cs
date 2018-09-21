@@ -4,7 +4,6 @@
                      "This is done each tick. If a higher priority child is running and the next frame a lower priority child wants to run it will interrupt the higher priority child. " +
                      "The selector evaluator will return success as soon as the first child returns success otherwise it will keep trying higher priority children. This task mimics " +
                      "the conditional abort functionality except the child tasks don't always have to be conditional tasks.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=109")]
     [TaskIcon("{SkinColor}SelectorEvaluatorIcon.png")]
     public class SelectorEvaluator : Composite
     {

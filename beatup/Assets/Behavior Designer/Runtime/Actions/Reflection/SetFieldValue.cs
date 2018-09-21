@@ -5,7 +5,6 @@ using System.Reflection;
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Sets the field to the value specified. Returns success if the field was set.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=149")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
     public class SetFieldValue : Action
@@ -39,7 +38,7 @@ namespace BehaviorDesigner.Runtime.Tasks
             }
 
             // If you are receiving a compiler error on the Windows Store platform see this topic:
-            // http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=46 
+            // https://www.opsive.com/support/documentation/behavior-designer/installation/
             var field = component.GetType().GetField(fieldName.Value);
             field.SetValue(component, fieldValue.GetValue());
 

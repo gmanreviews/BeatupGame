@@ -30,12 +30,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityParticleSystem
                 return TaskStatus.Failure;
             }
 
-#if UNITY_5_3 || UNITY_5_4
-            particleSystem.playbackSpeed = playbackSpeed.Value;
-#else
             ParticleSystem.MainModule mainParticleSystem = particleSystem.main;
-            mainParticleSystem.simulationSpeed= playbackSpeed.Value;
-#endif
+            mainParticleSystem.simulationSpeed = playbackSpeed.Value;
 
             return TaskStatus.Success;
         }

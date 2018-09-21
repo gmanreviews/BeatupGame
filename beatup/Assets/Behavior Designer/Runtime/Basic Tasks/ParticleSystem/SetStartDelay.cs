@@ -30,12 +30,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityParticleSystem
                 return TaskStatus.Failure;
             }
 
-#if UNITY_5_3 || UNITY_5_4
-            particleSystem.startDelay = startDelay.Value;
-#else
             ParticleSystem.MainModule mainParticleSystem = particleSystem.main;
             mainParticleSystem.startDelay = startDelay.Value;
-#endif
 
             return TaskStatus.Success;
         }

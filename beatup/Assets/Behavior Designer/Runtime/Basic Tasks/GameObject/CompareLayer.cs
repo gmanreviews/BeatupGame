@@ -13,7 +13,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject
 
         public override TaskStatus OnUpdate()
         {
-            return (GetDefaultGameObject(targetGameObject.Value).layer & layermask.value) != 0 ? TaskStatus.Success : TaskStatus.Failure;
+            return ((1 << GetDefaultGameObject(targetGameObject.Value).layer) & layermask.value) != 0 ? TaskStatus.Success : TaskStatus.Failure;
         }
 
         public override void OnReset()

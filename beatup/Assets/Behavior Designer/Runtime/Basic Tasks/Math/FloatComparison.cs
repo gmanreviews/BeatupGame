@@ -29,9 +29,9 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.Math
                 case Operation.LessThanOrEqualTo:
                     return float1.Value <= float2.Value ? TaskStatus.Success : TaskStatus.Failure;
                 case Operation.EqualTo:
-                    return float1.Value == float2.Value ? TaskStatus.Success : TaskStatus.Failure;
+                    return UnityEngine.Mathf.Approximately(float1.Value, float2.Value) ? TaskStatus.Success : TaskStatus.Failure;
                 case Operation.NotEqualTo:
-                    return float1.Value != float2.Value ? TaskStatus.Success : TaskStatus.Failure;
+                    return !UnityEngine.Mathf.Approximately(float1.Value, float2.Value) ? TaskStatus.Success : TaskStatus.Failure;
                 case Operation.GreaterThanOrEqualTo:
                     return float1.Value >= float2.Value ? TaskStatus.Success : TaskStatus.Failure;
                 case Operation.GreaterThan:

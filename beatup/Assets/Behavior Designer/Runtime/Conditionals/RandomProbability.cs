@@ -3,7 +3,6 @@
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("The random probability task will return success when the random probability is above the succeed probability. It will otherwise return failure.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=33")]
     public class RandomProbability : Conditional
     {
         [Tooltip("The chance that the task will return success")]
@@ -17,11 +16,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         {
             // If specified, use the seed provided.
             if (useSeed.Value) {
-#if UNITY_5_3
-                Random.seed = seed.Value;
-#else
                 Random.InitState(seed.Value);
-#endif
             }
         }
 

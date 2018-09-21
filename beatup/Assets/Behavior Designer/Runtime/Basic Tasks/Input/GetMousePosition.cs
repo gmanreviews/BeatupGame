@@ -8,7 +8,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityInput
     {
         [RequiredField]
         [Tooltip("The stored result")]
-        public SharedVector2 storeResult;
+        public SharedVector3 storeResult;
 
         public override TaskStatus OnUpdate()
         {
@@ -18,7 +18,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityInput
 
         public override void OnReset()
         {
-            storeResult = Vector2.zero;
+            storeResult = Vector3.zero;
         }
     }
 }

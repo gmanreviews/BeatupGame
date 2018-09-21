@@ -1,11 +1,8 @@
 using UnityEngine;
-using System;
-using System.Reflection;
 
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Compares the property value to the value specified. Returns success if the values are the same.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=152")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
     public class ComparePropertyValue : Conditional
@@ -39,7 +36,7 @@ namespace BehaviorDesigner.Runtime.Tasks
             }
 
             // If you are receiving a compiler error on the Windows Store platform see this topic:
-            // http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=46 
+            // https://www.opsive.com/support/documentation/behavior-designer/installation/
             var property = component.GetType().GetProperty(propertyName.Value);
             var propertyValue = property.GetValue(component, null);
 

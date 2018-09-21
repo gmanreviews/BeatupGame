@@ -1,4 +1,4 @@
-#if !UNITY_5_3 && !UNITY_5_4 && !UNITY_5_5 && !UNITY_5_6 && !UNITY_2017_1
+#if !UNITY_5_6 && !UNITY_2017_1
 using UnityEngine;
 
 namespace BehaviorDesigner.Runtime

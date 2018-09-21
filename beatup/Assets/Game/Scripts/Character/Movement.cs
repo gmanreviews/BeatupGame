@@ -29,11 +29,8 @@ public class Movement : MonoBehaviour
 
         moveAnim.SetFloat("horizontal", horizontal);
         moveAnim.SetFloat("vertical", vertical);
-
         Vector2 force = new Vector2(horizontal, vertical);
-
-        this.rigidBdy.AddForce(force);// * Time.fixedDeltaTime);
-
+        this.rigidBdy.velocity = force;
     }
 
     // Use this for initialization

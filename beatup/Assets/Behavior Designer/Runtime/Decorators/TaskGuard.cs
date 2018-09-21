@@ -6,7 +6,6 @@ namespace BehaviorDesigner.Runtime.Tasks
                      "specify how many times a particular task can be accessed at the same time.\n\nIn the previous animation task example you would specify an access count of 1. With this setup " +
                      "the animation task can be only controlled by one task at a time. If the first task is playing the animation and a second task wants to control the animation as well, it will " +
                      "either have to wait or skip over the task completely.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=40")]
     [TaskIcon("{SkinColor}TaskGuardIcon.png")]
     public class TaskGuard : Decorator
     {

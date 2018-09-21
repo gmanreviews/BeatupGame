@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-#if !(UNITY_5_3 || UNITY_5_4)
 using UnityEngine.AI;
-#endif
 
 namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityNavMeshAgent
 {
@@ -32,11 +30,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityNavMeshAgent
                 return TaskStatus.Failure;
             }
 
-#if UNITY_5_3 || UNITY_5_4 || UNITY_5_5
-            navMeshAgent.Resume();
-#else
             navMeshAgent.isStopped = false;
-#endif
 
             return TaskStatus.Success;
         }

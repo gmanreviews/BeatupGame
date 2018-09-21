@@ -5,7 +5,6 @@ using System.Reflection;
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Sets the property to the value specified. Returns success if the property was set.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=150")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
     public class SetPropertyValue : Action
@@ -39,7 +38,7 @@ namespace BehaviorDesigner.Runtime.Tasks
             }
 
             // If you are receiving a compiler error on the Windows Store platform see this topic:
-            // http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=46 
+            // https://www.opsive.com/support/documentation/behavior-designer/installation/
             var property = component.GetType().GetProperty(propertyName.Value);
             property.SetValue(component, propertyValue.GetValue(), null);
 

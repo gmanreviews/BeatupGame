@@ -1,12 +1,10 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Invokes the specified method with the specified parameters. Can optionally store the return value. Returns success if the method was invoked.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=145")]
     [TaskCategory("Reflection")]
     [TaskIcon("{SkinColor}ReflectionIcon.png")]
     public class InvokeMethod : Action
@@ -55,7 +53,7 @@ namespace BehaviorDesigner.Runtime.Tasks
                 }
             }
             // If you are receiving a compiler error on the Windows Store platform see this topic:
-            // http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=46 
+            // https://www.opsive.com/support/documentation/behavior-designer/installation/
             var methodInfo = component.GetType().GetMethod(methodName.Value, parameterTypeList.ToArray());
 
             if (methodInfo == null) {

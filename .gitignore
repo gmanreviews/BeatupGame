@@ -1,9 +1,9 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Assets/AssetStoreTools*
+beatup/Library/*
+beatup/Temp/*
+beatup/Obj/*
+beatup/Build/*
+beatup/Builds/*
+beatup/Assets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
@@ -36,3 +36,4 @@ sysinfo.txt
 *.unitypackage
 *.csproj
 *.csproj
+

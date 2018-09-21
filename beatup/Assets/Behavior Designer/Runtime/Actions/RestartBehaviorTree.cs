@@ -3,7 +3,6 @@ using UnityEngine;
 namespace BehaviorDesigner.Runtime.Tasks
 {
     [TaskDescription("Restarts a behavior tree, returns success after it has been restarted.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=66")]
     [TaskIcon("{SkinColor}RestartBehaviorTreeIcon.png")]
     public class RestartBehaviorTree : Action
     {

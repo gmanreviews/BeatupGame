@@ -9,7 +9,6 @@ namespace BehaviorDesigner.Runtime.Tasks
                      "execution in a random order. Other than that the random sequence class is the same as the sequence class. It will stop running tasks " +
                      "as soon as a single task ends in failure. On a task failure it will stop executing all of the child tasks and return failure. " +
                      "If no child returns failure then it will return success.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=31")]
     [TaskIcon("{SkinColor}RandomSequenceIcon.png")]
     public class RandomSequence : Composite
     {
@@ -29,11 +28,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         {
             // If specified, use the seed provided.
             if (useSeed) {
-#if !(UNITY_5_3)
                 Random.InitState(seed);
-#else
-                Random.seed = seed;
-#endif
             }
 
             // Add the index of each child to a list to make the Fischer-Yates shuffle possible.

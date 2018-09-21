@@ -4,7 +4,6 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.UnityPhysics
 {
     [TaskCategory("Basic/Physics")]
     [TaskDescription("Casts a sphere against all colliders in the scene. Returns success if a collider was hit.")]
-    [HelpURL("http://www.opsive.com/assets/BehaviorDesigner/documentation.php?id=117")]
     public class SphereCast : Action
     {
         [Tooltip("Starts the spherecast at the GameObject's position. If null the originPosition will be used")]
