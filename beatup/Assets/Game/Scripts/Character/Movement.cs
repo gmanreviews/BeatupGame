@@ -27,10 +27,19 @@ public class Movement : MonoBehaviour
             horizontal = Input.GetAxisRaw("Horizontal");
         }
 
-        moveAnim.SetFloat("horizontal", horizontal);
-        moveAnim.SetFloat("vertical", vertical);
+        if (this.GetComponent<Character>() != null)
+        {
+            moveAnim.SetFloat("horizontal", horizontal);
+            moveAnim.SetFloat("vertical", vertical);
+        }
+
         Vector2 force = new Vector2(horizontal, vertical);
         this.rigidBdy.velocity = force;
+    }
+
+    private void UpdateEquippableAnimators(float v, float h)
+    {
+        
     }
 
     // Use this for initialization
