@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 1713380786}
   - component: {fileID: 1713380785}
   - component: {fileID: 1713380791}
+  - component: {fileID: 1713380790}
   m_Layer: 0
   m_Name: BrownShoes
   m_TagString: Untagged
@@ -682,7 +683,7 @@ Animator:
   m_GameObject: {fileID: 1713380784}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a60518293113a34caaced6a6a2faeb0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3d9a495cf25c79a4facdd68109aedf51, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -725,7 +726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300018, guid: 19915d6958e4f1943bfbe7ae6429c7fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -749,6 +750,23 @@ Transform:
   m_Father: {fileID: 234433728}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713380790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1713380784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c370cde11189d4b94446028ca8c1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  aoc: {fileID: 0}
+  leftAnim: {fileID: 7400000, guid: 0b0886357a8c51d4db0723dbb27b0312, type: 2}
+  rightAnim: {fileID: 7400000, guid: efb36d1599b24b548a22bb6b8f268d1b, type: 2}
+  upAnim: {fileID: 7400000, guid: 0ff832b81f992a543a040d7944f2939e, type: 2}
+  downAnim: {fileID: 7400000, guid: ccedd41eb60f5bc4893307b2d0db199f, type: 2}
 --- !u!114 &1713380791
 MonoBehaviour:
   m_ObjectHideFlags: 0
